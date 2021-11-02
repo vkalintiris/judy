@@ -1,0 +1,181 @@
+judy (1.0.5-5) unstable; urgency=medium
+
+  * Patch from Andrey Gursky <andrey.gursky@e-mail.ua>, Remove
+    -fno-aggressive-loop-optimizations, (Closes: #782841))
+
+ -- Troy Heber <troyh@debian.org>  Mon, 27 Apr 2015 07:20:49 -0600
+
+judy (1.0.5-4) unstable; urgency=medium
+
+  * Patch from Vincent Bernat to remove dh-exec Closes: #760173)
+
+ -- Troy Heber <troyh@debian.org>  Wed, 03 Sep 2014 08:10:59 -0600
+
+judy (1.0.5-3) unstable; urgency=medium
+
+  * Missed adding dh-autoreconf on rules re-write. (Closes: #732824)
+  * Clean up auto generated man pages to resolve lintian errors and warnings
+  * Add README.source
+  * Add dh-exec dependency for multiarch .so link creation
+
+ -- Troy Heber <troyh@debian.org>  Mon, 11 Aug 2014 09:27:37 -0600
+
+judy (1.0.5-2) unstable; urgency=medium
+
+  * Accepting NMU changes
+  * Update policy to 3.9.5.0
+  * Compile with -fno-aggressive-loop-optimizations, (Closes: #755099)
+  * Add watch file (Closes: #513200)
+  * debian/rules re-write to minimal dh 9 compability
+
+ -- Troy Heber <troyh@debian.org>  Tue, 15 Jul 2014 15:14:04 -0600
+
+judy (1.0.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use dh-autoreconf in build to support new architectures (Closes: #732824)
+
+ -- Chen Baozi <baozich@gmail.com>  Tue, 03 Jun 2014 15:14:54 +0800
+
+judy (1.0.5-1) unstable; urgency=low
+
+  * Fixed alignment issue, (Closes: #401124)
+  * Update packaging, policy, debhelper, etc.
+  * Removed old BIT cruft from rules
+  * Upstream has propper distclean target (Closes: #424425)
+
+ -- Troy Heber <troyh@debian.org>  Mon, 21 May 2007 15:07:50 -0600
+
+judy (1.0.3-2) unstable; urgency=low
+
+  * Resolves #372525, remove .shlibs
+  * Policy update
+  * Updated FSF address in copyright
+
+ -- Troy Heber <troyh@debian.org>  Sun, 11 Jun 2006 15:58:14 -0600
+
+judy (1.0.3-1) unstable; urgency=low
+  
+  * Workaround bug in make: #349078
+  * Using my shiny new email address
+  * Fixed FTBFS because of #349078 (closes: #353105)
+
+ -- Troy Heber <troyh@debian.org>  Thu, 16 Feb 2006 08:26:11 -0700
+
+judy (1.0.2-1) unstable; urgency=low
+
+  * Create .so symlink in the dev package.
+  * Fixed generation of manpages (closes: #331700)
+  * Fixed issues with 32-bit & 64-bit builds
+ 
+ -- Troy Heber <troyh@debian.org>  Wed, 18 Jan 2006 11:43:24 -0700
+
+judy (1.0.1-5) unstable; urgency=low
+  
+  * Moving LGPL link in copyright back to LGPL-2.1
+  * Cleanup of debian/rules: removed explicit refs to 32-bit archs, removed
+    unnecessary nostrip, using --man dir to install man pages, moving from
+    dh_movefiles to dh_install.
+
+ -- Troy Heber <troy.heber@hp.com>  Tue, 22 Mar 2005 06:55:53 -0700
+
+judy (1.0.1-4) unstable; urgency=low
+
+  * Fixed LGPL link in copyright
+  * Removing unused postinst and postrm
+
+ -- Troy Heber <troy.heber@hp.com>  Sat, 19 Mar 2005 15:16:54 -0700
+
+judy (1.0.1-3) unstable; urgency=low
+
+  * Fixed Section for libjudy-dev, was devel moved to libdevel.
+  * Last upload was debian native, fixing and making non-native.
+
+ -- Troy Heber <troy.heber@hp.com>  Wed, 16 Mar 2005 16:41:23 -0700 
+
+judy (1.0.1-2) unstable; urgency=low
+  
+  * Updated copyright file to include LGPL
+  * Fixing incorrect defaults from 64-bit to 32-bit on PPC & s390
+
+ -- Troy Heber <troy.heber@hp.com>  Thu, 03 Mar 2005 10:20:03 -0700 
+
+judy (1.0.1-1) unstable; urgency=low
+
+  * New version of Judy with new 1.0.1 API 
+  * Troy Heber is taking over maintainership from Theodore Y. Ts'o.
+  * Closes: Bug#2277142 
+
+ -- Troy Heber <troy.heber@hp.com>  Tue, 14 Dec 2004 09:23:48 -0700 
+
+judy (0.0.4-7) unstable; urgency=low
+
+  * Fix incorrect symlinks in man pages (Closes: #203995)
+
+ -- Theodore Y. Ts'o <tytso@mit.edu>  Sat, 17 Jan 2004 00:04:53 -0500
+
+judy (0.0.4-6) unstable; urgency=low
+
+  * Fix maintainer field in debian control file (mea culpa, mea maximum
+    culpa)
+
+ -- Theodore Y. Ts'o <tytso@mit.edu>  Sat, 11 Oct 2003 02:31:47 -0400
+
+judy (0.0.4-5) unstable; urgency=low
+
+  * New maintainer.
+  * Clean up some lintian warnings
+      - Compress man pages with -9
+      - Remove (s) from "Upstream Author(s)"
+      - Use symbolic links for man pages
+  * Don't use hard-coded /usr/bin/{cc,ld,ar}
+
+ -- Theodore Y. Ts'o <tytso@mit.edu>  Sat, 12 Jul 2003 01:39:27 -0400
+
+judy (0.0.4-4) unstable; urgency=low
+
+  * Fix multiline strings so judy will build with gcc 3.3.  closes: #194936.
+  * Orphan package; cf. #172772.
+  * Drop hppa build-dep on gcc-3.2.
+  * Bump Standards-Version to 3.5.10.
+
+ -- Clint Adams <schizo@debian.org>  Sun,  1 Jun 2003 00:26:32 -0400
+
+judy (0.0.4-3) unstable; urgency=medium
+
+  * Set soname on all arches. 
+
+ -- Clint Adams <schizo@debian.org>  Sun, 22 Sep 2002 17:57:30 -0400
+
+judy (0.0.4-2) unstable; urgency=medium
+
+  * Fix bad shlibs. 
+
+ -- Clint Adams <schizo@debian.org>  Sun, 22 Sep 2002 17:07:28 -0400
+
+judy (0.0.4-1) unstable; urgency=medium
+
+  * New, slightly more portable upstream "trial" version.
+
+ -- Clint Adams <schizo@debian.org>  Sat, 21 Sep 2002 18:55:43 -0400
+
+judy (0.0.0-3) unstable; urgency=medium
+
+  * Due to gcc 3.0 bugs, build with 3.2 on hppa.
+
+ -- Clint Adams <schizo@debian.org>  Sat, 14 Sep 2002 12:14:01 -0400
+
+judy (0.0.0-2) unstable; urgency=low
+
+  * Add Eric Schwartz <emschwar@debian.org> to Uploaders.
+  * ia64 uses a different build directory, so be cognizant of that.
+  * Update to Standards-Version 3.5.7.
+
+ -- Clint Adams <schizo@debian.org>  Fri,  6 Sep 2002 16:42:57 -0400
+
+judy (0.0.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Clint Adams <schizo@debian.org>  Thu, 29 Aug 2002 05:51:20 +0000
+
