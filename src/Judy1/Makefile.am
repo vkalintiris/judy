@@ -1,4 +1,4 @@
-INCLUDES =  -I. -I.. -I../JudyCommon/ 
+AM_CPPFLAGS =  -I. -I.. -I../JudyCommon/
 AM_CFLAGS = -DJUDY1 @WARN_CFLAGS@ 
 
 noinst_LTLIBRARIES = libJudy1.la libnext.la libprev.la libcount.la libinline.la
@@ -18,7 +18,7 @@ libinline_la_SOURCES = j__udy1Test.c
 libinline_la_CFLAGS = $(AM_CFLAGS) -DJUDYGETINLINE
 
 Judy1Tables.c: Judy1TablesGen.c
-	$(CC) $(INCLUDES) $(AM_CFLAGS) @CFLAGS@ -o Judy1TablesGen Judy1TablesGen.c; ./Judy1TablesGen
+	$(CC) $(AM_CPPFLAGS) $(AM_CFLAGS) @CFLAGS@ -o Judy1TablesGen Judy1TablesGen.c; ./Judy1TablesGen
 
 Judy1ByCount.c:../JudyCommon/JudyByCount.c
 	cp -f ../JudyCommon/JudyByCount.c      		Judy1ByCount.c   

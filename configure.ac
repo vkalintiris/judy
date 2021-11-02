@@ -4,7 +4,10 @@ AC_INIT(Judy, 1.0.5, dougbaskins@yahoo.com)
 AM_MAINTAINER_MODE
 
 dnl Turn on automake, and pass it the PACKAGE_NAME and PACKAGE_VERSION, too.
-AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
+# AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
+AC_CONFIG_SRCDIR([src/JudyCommon/JudyMalloc.c])
+AM_INIT_AUTOMAKE
+
 
 dnl Tell autoconf we want to keep our preprocessor defines in a header named
 dnl config.h.  This keeps automake from passing a zillion -D directives to

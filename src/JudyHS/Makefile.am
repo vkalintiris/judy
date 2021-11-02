@@ -1,4 +1,4 @@
-INCLUDES =  -I. -I.. -I../JudyCommon/ 
+AM_CPPFLAGS =  -I. -I.. -I../JudyCommon/
 AM_CFLAGS = @CFLAGS@ @WARN_CFLAGS@ 
 
 noinst_LTLIBRARIES = libJudyHS.la

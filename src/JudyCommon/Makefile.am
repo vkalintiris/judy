@@ -1,4 +1,4 @@
-INCLUDES =  -I. -I..
+AM_CPPFLAGS =  -I. -I..
 AM_CFLAGS = @CFLAGS@ @WARN_CFLAGS@ 
 
 noinst_LTLIBRARIES = libJudyMalloc.la
